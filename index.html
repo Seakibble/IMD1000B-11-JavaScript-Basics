@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 - JavaScript Basics</title>
+
+    <style>
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Hello World</h1>
+
+    <button onclick="ChangeHeading()">Click me!</button>
+    <button onclick="Revert()">Revert</button>
+
+    <script>
+        // console.log("Hello World!");
+        console.log("Hello World!")
+
+        var age = 29
+        let name = "Max"
+
+        const birthMonth = "July"
+        // birthMonth = "August"
+
+        console.log(age + " years")
+        console.log(age, name, birthMonth)
+
+        // age = age + 3
+        // age += 5
+        age++
+
+        if (age > 30) {
+            console.log("You old, boy.")
+        } else if (age == 30) {
+            console.log("You on the line, fellow.")
+        } else {
+            console.log("You young, girl.")
+        }
+
+        switch (birthMonth) {
+            case "July":
+                console.log("You're a Cancer, probably.")
+                break;
+            case "August":
+                console.log("You're a Leo, probably.")
+                break;
+            default:
+                console.log("You're one of the others, I guess")
+        }
+
+        function Birthday() {
+            // let present = "New dog"
+            age++
+            console.log("It's " + birthMonth + ", " + name + " is now " + age + " years old.")
+        }
+
+        function ChangeHeading() {
+            let $heading = document.getElementById('heading')
+            // console.log($heading)
+            $heading.innerText = "My name is Max"
+            $heading.classList.add('red')
+        }
+
+        function Revert() {
+            let $heading = document.getElementById('heading')
+
+            $heading.innerText = "Hello World"
+            $heading.classList.remove('red')
+        }
+
+        // let fruit = 'apple'
+        // let fruit2 = 'banana'
+        // let fruit3 = 'orange'
+        let fruit = ['apple', 'banana', 'orange']
+        console.log(fruit[1])
+
+    </script>
+</body>
+</html>
